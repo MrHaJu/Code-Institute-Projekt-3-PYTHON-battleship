@@ -1,7 +1,9 @@
 from random import randint
 
 
-COMPUTER_BOARD = [[""] * 8 for x in range(8)]
+# Invisible Board holding ship locations
+COMPUTER_BOARD = [[" "] * 8 for x in range(8)]
+# Player Borads displays hits and misses
 PLAYER_BOARD = [[" "] * 8 for x in range(8)]
 
 letter_be_number = {"A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5, "G": 6, "H": 7}
