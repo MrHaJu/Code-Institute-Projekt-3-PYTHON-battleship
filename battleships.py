@@ -18,8 +18,13 @@ letter_be_number = {"A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5, "G": 6, "H":
 
 
 
-def create_ships():
-    pass
+# 5 Ships created by Computer
+def create_ships(field):
+    for ship in range(5):
+        ship_row, ship_column = randint(0, 7), randint(0, 7)
+        while field[ship_row][ship_column] == "X":
+            ship_row, ship_column = ship_location()
+        field[ship_row][ship_column] = "X"
 
 
 def ship_location():
