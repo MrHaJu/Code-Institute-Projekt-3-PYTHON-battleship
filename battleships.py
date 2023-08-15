@@ -16,8 +16,6 @@ def print_field(field):
 
 letter_be_number = {"A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5, "G": 6, "H": 7}
 
-
-
 # 5 Ships created by Computer
 def create_ships(field):
     for ship in range(5):
