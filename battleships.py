@@ -95,31 +95,36 @@ def enter_or_esc():
 
 # Main function to start the game
 if __name__ == "__main__":
-    create_ships(COMPUTER_BOARD)
+    computer_create_ships(COMPUTER_BOARD)
+    player_create_ships(PLAYER_BOARD)
     turns = 6  # you have 6 Turns to guess
-    while turns > 0:  # as long as the turns are grater 0 the while loop runs
+    while turns > 0:  # as long as the turns are greater than 0, the loop runs
         clear_terminal()  # clears the terminal after each round
         print("BATTLESHIP\n")
-        print_field(PLAYER_BOARD)
+        print("Player")
+        print_field(PLAYER_GUESS_BOARD)
+        print("\nComputer")
+        print_field(COMPUTER_GUESS_BOARD)
         row, column = ship_location()
-        if PLAYER_BOARD[row][column] == "-" or PLAYER_BOARD[row][column] == "X":  # if you guess twice the same it
-            print("\nYou already had that guess\n")  # prints an error
-        elif COMPUTER_BOARD[row][column] == "X":  # if you hit a ship
-            print("\nYou hit a Battleship\n")  # it prints a hit Message
-            PLAYER_BOARD[row][column] = "X"
+        if PLAYER_GUESS_BOARD[row][column] == "-" or PLAYER_GUESS_BOARD[row][column] == "X":  
+            print("\nYou already had that guess\n")  
+        elif COMPUTER_BOARD[row][column] == "X":  
+            print("\nYou hit a Battleship\n")  
+            PLAYER_GUESS_BOARD[row][column] = "X"
             turns -= 1
         else:
-            print("\nYou missed\n")  # if you miss a guess it prints the miss message
-            PLAYER_BOARD[row][column] = "-"
+            print("\nYou missed\n")  
+            PLAYER_GUESS_BOARD[row][column] = "-"
             turns -= 1
-        if count_hits(PLAYER_BOARD) == 5:
+        if count_hits(PLAYER_GUESS_BOARD) == 5:
             print(
                 "\nYou got all the Battleships\n"
-            )  # Winning message if all battleships are hit
+            )  
             break
         print(
             "\nYou have " + str(turns) + " turns remaining\n"
-        )  # prints every round the remaining turns
-        if turns == 0:  # if all turns are over
-            print("Game over\n")  #   game over message
+        )  
+        if turns == 0:  
+            print("Game over\n")  
+            break
         enter_or_esc()  # after each round you have to press the Enter to go on or ESC to end the game
