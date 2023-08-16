@@ -26,12 +26,19 @@ def create_ships(field):
 
 
 def ship_location():
-    pass
+    column = input("Please choose a ship column A-H: ").strip().upper()
+    while column not in "ABCDEFGH" or column == "":
+        print("Please choose a valid column")
+        column = input("Choose the column of the ship: ").strip().upper()
+    row = input("Please chose a ship row 1-8: ").strip().upper()
+    while row not in "12345678" or row == "":
+        print("Please choose a valid row")
+        row = input("Choose the row of the ship: ").strip().upper()
+    return int(row) - 1, letter_be_number[column]
 
 
 def count_hits():
     pass
 
 
-create_ships()
-turns = 10
+
