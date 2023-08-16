@@ -24,7 +24,7 @@ def create_ships(field):
             ship_row, ship_column = ship_location()
         field[ship_row][ship_column] = "X"
 
-
+# Input function to guess where the computer ships are
 def ship_location():
     column = input("Please choose a ship column A-H: ").strip().upper()
     while column not in "ABCDEFGH" or column == "":
@@ -37,8 +37,15 @@ def ship_location():
     return int(row) - 1, letter_be_number[column]
 
 
-def count_hits():
-    pass
+# checks if all ships are hit
+def count_hits(field):
+    count = 0
+    for row in field:
+        for column in row:
+            if column == "X":
+                count += 1
+    return count
+
 
 
 
