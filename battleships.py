@@ -27,7 +27,14 @@ def print_field(field):
         row_number += 1
 
 
-letter_be_number = {"A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5, "G": 6, "H": 7}
+letter_be_number = {"A": 0,
+                    "B": 1,
+                    "C": 2,
+                    "D": 3,
+                    "E": 4,
+                    "F": 5,
+                    "G": 6,
+                    "H": 7}
 
 
 # 5 Ships created by Computer
@@ -38,12 +45,13 @@ def computer_create_ships(field):
             ship_row, ship_column = ship_location()
         field[ship_row][ship_column] = "X"
 
+
 # 5 ships to create by Player
 def player_create_ships(field):
     for ship in range(5):
         clear_terminal()
         print("\nBATTLESHIP\n")
-        print("\nYou first have to choose 5 ship Locations for your playfield\n")
+        print("\nYou have to choose 5 ship Locations for your playfield\n")
         print("After that, the game starts automatically\n")
         print_field(field)
         ship_row, ship_column = ship_location()
@@ -51,6 +59,7 @@ def player_create_ships(field):
             print("That location is already taken, choose another")
             ship_row, ship_column = ship_location()
         field[ship_row][ship_column] = "X"
+
 
 # Input function to guess where the computer ships are
 def ship_location():
@@ -76,6 +85,7 @@ def ship_location():
             print("Please choose a valid row")
     return row, column
 
+
 # checks if all ships are hit
 def count_hits(field):
     count = 0
@@ -91,9 +101,9 @@ def enter_or_esc():
     while True:
         if msvcrt.kbhit():
             key = msvcrt.getch()
-            if key == b'\x1b':  # ESC key
+            if key == b"\x1b":  # ESC key
                 exit()  # ends the Game
-            elif key == b'\r':  # Enter key
+            elif key == b"\r":  # Enter key
                 break  # go on with the game
 
 
@@ -105,8 +115,11 @@ if __name__ == "__main__":
     while turns > 0:  # as long as the turns are greater than 0, the loop runs
         clear_terminal()  # clears the terminal after each round
         print("BATTLESHIP\n")
-        print("Each round begins with your turn. when you have made your move, the computer makes a move.\n")
-        print("Everyone has 10 turns. The first to sink all ships wins. When all turns have been used up and ships are still standing, the player with the most hits wins.\n")
+        print("Each round begins with your turn. ")
+        print("when you have made your move, the computer makes a move.\n")
+        print("Everyone has 10 turns. The first to sink all ships wins. ")
+        print("When all turns have been used up and ships are still standing,")
+        print("the player with the most hits wins.\n")
         print("Computer moves")
         print_field(COMPUTER_GUESS_BOARD)
         print("\nPlayer")
@@ -114,38 +127,41 @@ if __name__ == "__main__":
         print("\nMake your move\n")
         print_field(PLAYER_GUESS_BOARD)
         row, column = ship_location()
-        if PLAYER_GUESS_BOARD[row][column] == "-" or PLAYER_GUESS_BOARD[row][column] == "X":  
-            print("\nYou already had that guess\n")  
-        elif COMPUTER_BOARD[row][column] == "X":  
-            print("\nYou hit a Battleship\n")  
+        if (
+            PLAYER_GUESS_BOARD[row][column] == "-"
+            or PLAYER_GUESS_BOARD[row][column] == "X"
+        ):
+            print("\nYou already had that guess\n")
+        elif COMPUTER_BOARD[row][column] == "X":
+            print("\nYou hit a Battleship\n")
             PLAYER_GUESS_BOARD[row][column] = "X"
             turns -= 1
         else:
-            print("\nYou missed\n")  
+            print("\nYou missed\n")
             PLAYER_GUESS_BOARD[row][column] = "-"
             turns -= 1
         if count_hits(PLAYER_GUESS_BOARD) == 5:
-            print(
-                "\nYou got all the Battleships\n"
-            )  
+            print("\nYou got all the Battleships\n")
             break
-        print(
-            "\nYou have " + str(turns) + " turns remaining\n"
-        )  
-        if turns == 0:  
-            print("Game over\n")  
+        print("\nYou have " + str(turns) + " turns remaining\n")
+        if turns == 0:
+            print("Game over\n")
             break
-        enter_or_esc()  # after each round you have to press the Enter to go on or ESC to end the game
-        
+        # after each round press the Enter to go on or ESC to end the game
+        enter_or_esc()
+
         # Computer's turn
         row, column = randint(0, 7), randint(0, 7)
-        while COMPUTER_GUESS_BOARD[row][column] == "-" or COMPUTER_GUESS_BOARD[row][column] == "X":
+        while (
+            COMPUTER_GUESS_BOARD[row][column] == "-"
+            or COMPUTER_GUESS_BOARD[row][column] == "X"
+        ):
             row, column = randint(0, 7), randint(0, 7)
         if PLAYER_BOARD[row][column] == "X":
             COMPUTER_GUESS_BOARD[row][column] = "X"
         else:
             COMPUTER_GUESS_BOARD[row][column] = "-"
-        
+
         clear_terminal()  # clears the terminal after each round
         print("BATTLESHIP\n")
         print("Player\n")
@@ -172,6 +188,6 @@ if __name__ == "__main__":
     elif computer_hits > player_hits:
         print("\nSorry, the computer wins with", computer_hits, "hits!")
     else:
-        print("\nIt's a tie! Both player and computer have", player_hits, "hits.")
+        print("\nIt's a tie! Both have", player_hits, "hits.")
 
     input("\nPress Enter to exit...")  # Wait for user input before exiting
