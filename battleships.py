@@ -128,3 +128,33 @@ if __name__ == "__main__":
             print("Game over\n")  
             break
         enter_or_esc()  # after each round you have to press the Enter to go on or ESC to end the game
+        
+        # Computer's turn
+        row, column = randint(0, 7), randint(0, 7)
+        while COMPUTER_GUESS_BOARD[row][column] == "-" or COMPUTER_GUESS_BOARD[row][column] == "X":
+            row, column = randint(0, 7), randint(0, 7)
+        if PLAYER_BOARD[row][column] == "X":
+            COMPUTER_GUESS_BOARD[row][column] = "X"
+        else:
+            COMPUTER_GUESS_BOARD[row][column] = "-"
+        
+        clear_terminal()  # clears the terminal after each round
+        print("BATTLESHIP\n")
+        print("Player")
+        print_field(PLAYER_GUESS_BOARD)
+        print("\nComputer")
+        print_field(COMPUTER_GUESS_BOARD)
+
+        if count_hits(COMPUTER_GUESS_BOARD) == 5:
+            print("Sorry, the computer won.")
+            break
+
+    player_hits = count_hits(PLAYER_GUESS_BOARD)
+    computer_hits = count_hits(COMPUTER_GUESS_BOARD)
+
+    clear_terminal()
+    print("BATTLESHIP - GAME OVER\n")
+    print("Player")
+    print_field(PLAYER_GUESS_BOARD)
+    print("\nComputer")
+    print_field(COMPUTER_GUESS_BOARD)
