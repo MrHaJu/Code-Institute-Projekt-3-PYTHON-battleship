@@ -106,7 +106,7 @@ if __name__ == "__main__":
         print("BATTLESHIP\n")
         print("Each round begins with your turn. when you have made your move, the computer makes a move.\n")
         print("Everyone has 10 turns. The first to sink all ships wins. When all turns have been used up and ships are still standing, the player with the most hits wins.\n")
-        print("Computer")
+        print("Computer moves")
         print_field(COMPUTER_GUESS_BOARD)
         print("\nPlayer")
         print_field(PLAYER_BOARD)
