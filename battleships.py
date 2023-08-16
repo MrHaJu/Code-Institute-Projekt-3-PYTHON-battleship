@@ -140,13 +140,13 @@ if __name__ == "__main__":
         
         clear_terminal()  # clears the terminal after each round
         print("BATTLESHIP\n")
-        print("Player")
+        print("Player\n")
         print_field(PLAYER_GUESS_BOARD)
-        print("\nComputer")
+        print("\nComputer\n")
         print_field(COMPUTER_GUESS_BOARD)
 
         if count_hits(COMPUTER_GUESS_BOARD) == 5:
-            print("Sorry, the computer won.")
+            print("\nSorry, the computer won.")
             break
 
     player_hits = count_hits(PLAYER_GUESS_BOARD)
@@ -160,10 +160,10 @@ if __name__ == "__main__":
     print_field(COMPUTER_GUESS_BOARD)
 
     if player_hits > computer_hits:
-        print("Congratulations! You win with", player_hits, "hits!")
+        print("\nCongratulations! You win with", player_hits, "hits!")
     elif computer_hits > player_hits:
-        print("Sorry, the computer wins with", computer_hits, "hits!")
+        print("\nSorry, the computer wins with", computer_hits, "hits!")
     else:
-        print("It's a tie! Both player and computer have", player_hits, "hits.")
+        print("\nIt's a tie! Both player and computer have", player_hits, "hits.")
 
-    input("Press Enter to exit...")  # Wait for user input before exiting
+    input("\nPress Enter to exit...")  # Wait for user input before exiting
