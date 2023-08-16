@@ -41,6 +41,9 @@ def computer_create_ships(field):
 # 5 ships to create by Player
 def player_create_ships(field):
     for ship in range(5):
+        print("\nBATTLESHIP\n")
+        print("\nYou first have to choose 5 ship Locations for your playfield\n")
+        print("After that, the game starts automatically\n")
         print_field(field)
         ship_row, ship_column = ship_location()
         while field[ship_row][ship_column] == "X":
@@ -101,6 +104,8 @@ if __name__ == "__main__":
     while turns > 0:  # as long as the turns are greater than 0, the loop runs
         clear_terminal()  # clears the terminal after each round
         print("BATTLESHIP\n")
+        print("Each round begins with your turn. when you have made your move, the computer makes a move.\n")
+        print("Everyone has 10 turns. The first to sink all ships wins. When all turns have been used up and ships are still standing, the player with the most hits wins.\n")
         print("Player")
         print_field(PLAYER_GUESS_BOARD)
         print("\nComputer")
