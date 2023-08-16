@@ -41,6 +41,7 @@ def computer_create_ships(field):
 # 5 ships to create by Player
 def player_create_ships(field):
     for ship in range(5):
+        clear_terminal()
         print("\nBATTLESHIP\n")
         print("\nYou first have to choose 5 ship Locations for your playfield\n")
         print("After that, the game starts automatically\n")
