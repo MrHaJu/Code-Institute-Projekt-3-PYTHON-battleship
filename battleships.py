@@ -50,16 +50,27 @@ def player_create_ships(field):
 
 # Input function to guess where the computer ships are
 def ship_location():
-    column = input("Please choose a ship column A-H: ").strip().upper()
-    while column not in "ABCDEFGH" or column == "":
-        print("Please choose a valid column")
-        column = input("Choose the column of the ship: ").strip().upper()
-    row = input("Please chose a ship row 1-8: ").strip().upper()
-    while row not in "12345678" or row == "":
-        print("Please choose a valid row")
-        row = input("Choose the row of the ship: ").strip().upper()
-    return int(row) - 1, letter_be_number[column]
-
+    while True:
+        try:
+            column = input("Please choose a ship column A-H: ").strip().upper()
+            if column not in "ABCDEFGH" or column == "":
+                raise KeyError
+            if column in "ABCDEFGH":
+                column = letter_be_number[column]
+                break
+        except KeyError:
+            print("Please choose a valid column")
+    while True:
+        try:
+            row = input("Please chose a ship row 1-8: ").strip().upper()
+            if row not in "12345678" or row == "":
+                raise ValueError
+            if row in "12345678":
+                row = int(row) - 1
+                break
+        except ValueError:
+            print("Please choose a valid row")
+    return row, column
 
 # checks if all ships are hit
 def count_hits(field):
