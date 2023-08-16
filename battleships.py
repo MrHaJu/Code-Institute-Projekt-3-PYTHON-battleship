@@ -78,7 +78,7 @@ if __name__ == "__main__":
         print("BATTLESHIP\n")
         print_field(PLAYER_BOARD)
         row, column = ship_location()
-        if PLAYER_BOARD[row][column] == "-":  # if you guess twice the same it
+        if PLAYER_BOARD[row][column] == "-" or PLAYER_BOARD[row][column] == "X":  # if you guess twice the same it
             print("\nYou already had that guess\n")  # prints an error
         elif COMPUTER_BOARD[row][column] == "X":  # if you hit a ship
             print("\nYou hit a Battleship\n")  # it prints a hit Message
