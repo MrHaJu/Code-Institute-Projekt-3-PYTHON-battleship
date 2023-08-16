@@ -158,3 +158,12 @@ if __name__ == "__main__":
     print_field(PLAYER_GUESS_BOARD)
     print("\nComputer")
     print_field(COMPUTER_GUESS_BOARD)
+
+    if player_hits > computer_hits:
+        print("Congratulations! You win with", player_hits, "hits!")
+    elif computer_hits > player_hits:
+        print("Sorry, the computer wins with", computer_hits, "hits!")
+    else:
+        print("It's a tie! Both player and computer have", player_hits, "hits.")
+
+    input("Press Enter to exit...")  # Wait for user input before exiting
