@@ -100,7 +100,7 @@ def enter_or_esc():
 if __name__ == "__main__":
     computer_create_ships(COMPUTER_BOARD)
     player_create_ships(PLAYER_BOARD)
-    turns = 6  # you have 6 Turns to guess
+    turns = 10  # you have 6 Turns to guess
     while turns > 0:  # as long as the turns are greater than 0, the loop runs
         clear_terminal()  # clears the terminal after each round
         print("BATTLESHIP\n")
