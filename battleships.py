@@ -1,5 +1,7 @@
 from random import randint
 import getpass
+import os
+
 
 # Invisible Board holding ship locations
 COMPUTER_BOARD = [[" "] * 8 for x in range(8)]
