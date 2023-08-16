@@ -19,7 +19,7 @@ def print_field(field):
     print("  ---------------")
     row_number = 1
     for row in field:
-        print("%d|%s" % (row_number, "|".join(row)))
+        print("%d|%s|" % (row_number, "|".join(row)))
         row_number += 1
 
 
