@@ -38,6 +38,15 @@ def computer_create_ships(field):
             ship_row, ship_column = ship_location()
         field[ship_row][ship_column] = "X"
 
+# 5 ships to create by Player
+def player_create_ships(field):
+    for ship in range(5):
+        print_field(field)
+        ship_row, ship_column = ship_location()
+        while field[ship_row][ship_column] == "X":
+            print("That location is already taken, choose another")
+            ship_row, ship_column = ship_location()
+        field[ship_row][ship_column] = "X"
 
 # Input function to guess where the computer ships are
 def ship_location():
