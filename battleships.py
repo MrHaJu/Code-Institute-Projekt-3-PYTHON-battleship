@@ -5,8 +5,12 @@ import os
 
 # Invisible Board holding ship locations
 COMPUTER_BOARD = [[" "] * 8 for x in range(8)]
-# Player Borads displays hits and misses
+# Player Borads holding player ship locations
 PLAYER_BOARD = [[" "] * 8 for x in range(8)]
+# holding hit or misses by Player
+PLAYER_GUESS_BOARD = [[" "] * 8 for i in range(8)]
+# holding hit or misses by Computer
+COMPUTER_GUESS_BOARD = [[" "] * 8 for i in range(8)]
 
 
 # function to clear the terminal
