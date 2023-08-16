@@ -1,5 +1,5 @@
 from random import randint
-
+import getpass
 
 # Invisible Board holding ship locations
 COMPUTER_BOARD = [[" "] * 8 for x in range(8)]
@@ -77,6 +77,6 @@ if __name__ == "__main__":
         print("\nYou have " + str(turns) + " turns remaining\n")    # prints every round the remaining turns
         if turns == 0:  # if all turns are over 
             print("Game over\n")    #   game over message
-        input("Press any key to continue...") # after each round you have to press any Key to go on
+        getpass.getpass("Press Enter to continue...") # after each round you have to press the Enter to go on
 
 
