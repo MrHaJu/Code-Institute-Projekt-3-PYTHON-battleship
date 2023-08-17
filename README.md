@@ -42,7 +42,7 @@ The game is a simple PVE game. The player and the computer have 10 moves to win 
 
 #### Client goals
 
-- The user should be able to play the game without any prior knowledge of the game
+* The user should be able to play the game without any prior knowledge of the game
 
 #### First-time visitor goals
 * I want to find out how the game works
