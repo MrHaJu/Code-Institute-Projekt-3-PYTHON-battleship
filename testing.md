@@ -99,3 +99,8 @@ Full testing was performed on Visual Studio Code Terminal
 
 * Player and computer both have the same amount of hits  
 ![Player and computer both have the same amount of hits](assets/testing/images/tie.png)
+
+
+---
+
+Back to [README.md](readme.md)
