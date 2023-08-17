@@ -150,7 +150,7 @@ Please view the [testing.md](testing.md) file for more information on the testin
 
 #### Media
 
-*No media is used in this text-based game.
+* No media is used in this text-based game.
 
 ### Acknowledgments
 
