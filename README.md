@@ -80,7 +80,7 @@ The game was programmed in Python to use the terminal. Since the game is text-ba
 
 #### Accessibility
 
-* The game's text-based interface ensures a basic level of accessibility, allowing players with visual impairments to play.
+* The game's text-based interface ensures a basic level of accessibility.
 
 ---
 
@@ -137,7 +137,7 @@ Please view the [testing.md](testing.md) file for more information on the testin
 
 #### Code Used
 
-* The game logic and structure were developed by (Andreas Huppertz).
+
 * [Code from Bito VSC extension to find Bugs and Explain how code works](https://marketplace.visualstudio.com/items?itemName=Bito.Bito)
 * [Tutorial By KnowledgeMavens used as a Base for the Game](https://www.youtube.com/watch?v=tF1WRCrd_HQ)
 * [W3 schools to find ways to solve problems and improve the code](https://www.w3schools.com/)
@@ -146,7 +146,7 @@ Please view the [testing.md](testing.md) file for more information on the testin
 #### Content
 
 * The README template was adapted from the Code Institute README template.
-* The content was written by the owner (Andreas Huppertz).
+* The game logic and structure were developed by (Andreas Huppertz).
 
 #### Media
 
