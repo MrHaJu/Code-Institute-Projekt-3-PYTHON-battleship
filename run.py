@@ -1,5 +1,5 @@
 from random import randint
-import msvcrt
+import keyboard
 import os
 
 
@@ -99,12 +99,10 @@ def count_hits(field):
 def enter_or_esc():
     print("Press Enter to continue or ESC to quit...")
     while True:
-        if msvcrt.kbhit():
-            key = msvcrt.getch()
-            if key == b"\x1b":  # ESC key
-                exit()  # ends the Game
-            elif key == b"\r":  # Enter key
-                break  # go on with the game
+        if keyboard.is_pressed("esc"):  # Check if the ESC key is pressed
+            exit()  # Ends the game
+        elif keyboard.is_pressed("enter"):  # Check if the Enter key is pressed
+            break  # Continue with the game
 
 
 # Main function to start the game
