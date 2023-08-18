@@ -146,7 +146,7 @@ if __name__ == "__main__":
             print("Game over\n")
             break
         # after each round press the Enter to go on or ESC to end the game
-        enter_or_esc()
+        input("Press Enter to continue")
 
         # Computer's turn
         row, column = randint(0, 7), randint(0, 7)
