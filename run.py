@@ -97,9 +97,9 @@ def count_hits(field):
 
 
 def enter_or_esc():
-    print("Press Enter to continue or ESC to quit...")
+    print("Press Enter to continue or space to quit...")
     while True:
-        if keyboard.is_pressed("esc"):  # Check if the ESC key is pressed
+        if keyboard.is_pressed("space"):  # Check if the space key is pressed
             exit()  # Ends the game
         elif keyboard.is_pressed("enter"):  # Check if the Enter key is pressed
             break  # Continue with the game
