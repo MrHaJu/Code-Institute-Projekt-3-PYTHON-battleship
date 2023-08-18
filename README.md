@@ -62,6 +62,36 @@ The game was programmed in Python to use the terminal. Since the game is text-ba
 
 ### Features
 
+* Game Start, Player has to place 5 ships. A small instruction of what to do is shown.  
+![Game Start, Player has to place 5 ships](assets/testing/images/player-choice.png)
+
+* After placing all five ships, there is a description of the game. The game starts automatically.
+* At first, the player has to choose a column A-H  
+![Game start: Player has to choose a column A-H](assets/testing/images/ingame.png)
+
+* then the player has to choose a row 1-8  
+![Game start: Player has to choose a row 1-8](assets/testing/images/ingame2.png)
+
+* If the player hits a computer ship, it will be pointed out with a hit message.  
+![In the game, the player hits a computer ship](assets/testing/images/ingame-hit.png)
+
+* If the player misses a computer ship it shows the miss message.  
+![In the game, the player misses a computer ship](assets/testing/images/ingame-miss.png)
+
+* If the player wins the game, the game shows the "You win" message as shown in the image below:  
+![Player wins the game](assets/testing/images/win.png)
+
+* If the player loses the game, the game shows the "You loose" message:  
+![Player looses the game](assets/testing/images/loose.png)
+
+* Sometimes, the player and computer both have the same amount of hits  and the game shows a "Tie" message.  
+![Player and computer both have the same amount of hits](assets/testing/images/tie.png)
+
+* After win, loss or tie, the game ends.
+
+
+---
+
 #### Game Mechanics
 
 * The game allows the player to place their ships on the game board.
@@ -104,14 +134,36 @@ The game was programmed in Python to use the terminal. Since the game is text-ba
 
 #### Deployment
 
-The game is designed to be played locally in a terminal environment. It can be run by executing the Python script my_battleships.py.
+The game is designed to be played locally in a terminal environment. It can be run by executing the Python script my_battleships.py.  
 
+The third project was developed through Gitpod, using the template provided by Code Institute. Every step was documented and pushed thoroughly via GitHub.
+
+#### Github
 1. Login (or sign up) to Github.
 2. Find the repository for this project, Code-Institute-Projekt-3-PYTHON-battleship.
 3. Click on the Settings link.
 4. Click on the Pages link in the left-hand side navigation bar.
 5. In the Source section, choose main from the drop-down select branch menu. Select Root from the drop-down select folder menu.
 6. Click Save. Your live Github Pages site is now deployed at the URL shown.cal machine.
+
+#### Heroku
+
+The deployment is made using [Heroku](https://www.heroku.com/) following the listed steps:
+
+1. Log in or register a new account on Heroku
+2. Click on 'New' in the dashboard and select 'Create New App'
+3. Select a name for the app and choose your region.
+4. Click on "Create app"
+5. When the app is created click on Setting
+6. To improve compatibility with various Python libraries add Config Var with Key = PORT and the Value = 8000
+7. Add 2 buildpacks: Python and then Nodejs in this specific order
+8. Go back at the top and click on "Deploy" and select "GitHub"
+9. Scroll down and click on 'Connect to GitHub'
+10. Search for your GitHub repository name by typing it
+11. Click on "Connect"
+12. Scroll down and click on "Deploy Branch"
+13. You will see a message "The app was successfully deployed" when the app is built with python and all the depencencies
+14. Click on view and you will see the deployed site
 
 #### Local Development
 

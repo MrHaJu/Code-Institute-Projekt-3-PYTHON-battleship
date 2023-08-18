@@ -76,31 +76,4 @@ Full testing was performed on Visual Studio Code Terminal
 
 ---
 
-* Game Start, Player has to place 5 ships  
-![Game Start, Player has to place 5 ships](assets/testing/images/player-choice.png)
-
-* Game start: The player has to choose a column A-H  
-![Game start: Player has to choose a column A-H](assets/testing/images/ingame.png)
-
-* Game start: The player has to choose a row 1-8  
-![Game start: Player has to choose a row 1-8](assets/testing/images/ingame2.png)
-
-* In the game, the player hits a computer ship  
-![In the game, the player hits a computer ship](assets/testing/images/ingame-hit.png)
-
-* In the game, the player misses a computer ship  
-![In the game, the player misses a computer ship](assets/testing/images/ingame-miss.png)
-
-* Player wins the game  
-![Player wins the game](assets/testing/images/win.png)
-
-* Player loses the game  
-![Player looses the game](assets/testing/images/loose.png)
-
-* Player and computer both have the same amount of hits  
-![Player and computer both have the same amount of hits](assets/testing/images/tie.png)
-
-
----
-
 Back to [README.md](README.md)
