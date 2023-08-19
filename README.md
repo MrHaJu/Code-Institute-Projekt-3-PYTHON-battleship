@@ -106,7 +106,7 @@ The game was programmed in Python to use the terminal. Since the game is text-ba
 #### Interaction
 * The player can interact with the game by inputting coordinates for their guesses and ship placements.
 * The game provides clear messages for hits, misses, and game outcomes.
-* The player can exit the game after each round by pressing the "ESC" key.
+* The player can exit the game after each round by typing "exit".
 
 #### Accessibility
 
