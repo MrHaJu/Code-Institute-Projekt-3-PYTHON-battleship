@@ -44,6 +44,8 @@
 | 3 | Incorrect hit-and-miss validation | Updated the hit-and-miss validation to prevent a player from shooting at the same field twice and to display the correct messages |
 | 4 | If space is entered the game is aborted | inserted String Strip() Method to remove spaces and trailing whitespaces |
 | 5 | If only Enter was pressed, the game is aborted | If loop with KeyError inserted |
+| 6 | There were problems with the msvcrt module on HEROKU, since the msvcrt is based on windows and Heroku on Linux | I solved the problem by changing from msvcrt to sys and an input_key query. Now you can abort the game by typing exit and go on with just pressing enter |
+
 
 ### Known Bugs
 
