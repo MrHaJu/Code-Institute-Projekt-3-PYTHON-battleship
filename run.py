@@ -1,5 +1,5 @@
 from random import randint
-import keyboard
+import sys
 import os
 
 
@@ -97,12 +97,13 @@ def count_hits(field):
 
 
 def enter_or_esc():
-    print("Press Enter to continue or ESC to quit...")
+    print("Press Enter to continue or type 'exit' to quit...")
     while True:
-        if keyboard.is_pressed("esc"):  # Check if the ESC key is pressed
-            exit()  # Ends the game
-        elif keyboard.is_pressed("enter"):  # Check if the Enter key is pressed
-            break  # Continue with the game
+        input_key = input()  # Wait for User input
+        if input_key == "exit":
+            sys.exit()  # Ends the game
+        elif input_key == "":
+            break  # go on with the game
 
 
 # Main function to start the game
@@ -146,7 +147,7 @@ if __name__ == "__main__":
             print("Game over\n")
             break
         # after each round press the Enter to go on or ESC to end the game
-        input("Press Enter to continue")
+        enter_or_esc()
 
         # Computer's turn
         row, column = randint(0, 7), randint(0, 7)
